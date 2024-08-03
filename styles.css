@@ -1,0 +1,154 @@
+*{
+    transition: ease 1s;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    transition: ease 1s;
+    overflow: hidden;
+}
+
+.screen{
+    background-color: black;
+    margin: 2px;
+    height: 600px;
+}
+
+.title{
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}
+
+.carOption{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#score{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+}
+
+.sun{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    left: 15%;
+    visibility: hidden;
+}
+
+.meteorite{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    background-color: red;
+    border-radius: 30%;
+    z-index: 2;
+    animation: fall 2s linear forwards;
+    display: none;
+}
+
+.trees{
+    height: 200px;
+    position: absolute;
+    display: none;
+    height: 200px;
+    position: absolute;
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.car{
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    top: 74%;
+}
+
+.car img{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.road{
+    background-color: gray;
+    width: 100%;
+    height: 180px;
+    position: relative;
+    top: 417px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 30% 30% 0% 0%;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.yellowLine{
+    background-color: yellow;
+    width: 20px;
+    height: 179px;
+    border: 1px solid black;
+}
+
+#tree1{
+    top: 64%;
+    left: -23%;
+}
+
+#tree2{
+    justify-content: flex-start;
+    top: 64%;
+    left: 20%;
+}
+
+#tree3{
+    top: 64%;
+    left: -8%;
+}
+
+.btn{
+    visibility: hidden;
+}
+
+@keyframes fall {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 650px;
+    }
+}
+
+@media (max-width: 450px){
+    .car{
+        top: 48%;
+    }
+
+    #tree1{
+        top: 43%;
+    }
+
+    #tree2{
+        top: 45%;
+    }
+
+    #tree3{
+        top: 45%;
+    }
+}
